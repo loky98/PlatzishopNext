@@ -1,0 +1,8 @@
+- npx create-next-app shopPlatzi
+creacion predefinida para nuestro proyecto
+- npm install prettier eslint-plugin-prettier eslint-plugin-jsx-a11y eslint-config-prettier eslint-config-next
+intalacion de los recursos faltantes en el proyecto
+- npm install sass
+para intalar la configuracion de estilos
+- npm install axios
+para intalar las herramieta de consultas de la api
