@@ -1,18 +1,18 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const useGetProducts = (URL_API) => {
-    const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const result = await axios(URL_API);
-            setProducts(result.data);
-        };
-        fetchData();
-    }, []);
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios(URL_API);
+      setProducts(response.data);
+    }
+    fetchData();
+  }, [URL_API]);
 
-    return products;
+  return products;
 };
 
 export default useGetProducts;

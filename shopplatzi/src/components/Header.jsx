@@ -21,45 +21,47 @@ const Header = () => {
     const { state } = useContext(AppContext);
     const handleToggle = () => {
         setToggle(!toggle);
-    }
+    };
     return (
         <nav className={styles.Nav}>
-            <Link href="/">
-                <img src={menu.src} alt="menu" className={styles.nav_menu} />
+            <Link href="/Checkout" >
+                <div className={styles.nav_menu}>
+                    <Image src={menu.src} alt="menu" width={100} height={100} />
+                </div>
             </Link>
             <div className={styles["navbar-left"]}>
-                <Link href="/">
+                <Link href="/Checkout" >
                     <Image src={logo} alt="logo" className={styles["nav_logo"]} />
                 </Link>
                 <ul>
                     <li>
-                        <a href="/">All</a>
+                        All
                     </li>
                     <li>
-                        <a href="/">Clothes</a>
+                        Clothes
                     </li>
                     <li>
-                        <a href="/">Electronics</a>
+                        Electronics
                     </li>
                     <li>
-                        <a href="/">Furnitures</a>
+                        Furnitures
                     </li>
                     <li>
-                        <a href="/">Toys</a>
+                        Toys
                     </li>
                     <li>
-                        <a href="/">Others</a>
+                        Others
                     </li>
                 </ul>
             </div>
             <div className={styles["navbar-right"]}>
                 <ul>
-                    <li className={styles["navbar-email"]} onClick={handleToggle}>
+                    <li className={styles["navbar-email"]} onClick={handleToggle} role="presentation">
                         platzi@example.com
                     </li>
-                    <li className={styles["navbar-shopping-cart"]} onClick={() => setToggolOrders(!toggleOrders)}>
-                        <img src={shoppingCart.src} alt="shopping cart" />
-                        {state.cart.length > 0 ? <div> {state.cart.length} </div> : null}
+                    <li className={styles["navbar-shopping-cart"]} onClick={() => setToggolOrders(!toggleOrders)} role="presentation">
+                        <Image src={shoppingCart.src} alt="shopping cart" width={20} height={20} />
+                        {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
                     </li>
                 </ul>
             </div>
@@ -67,5 +69,5 @@ const Header = () => {
             {toggleOrders && <MyOrder />}
         </nav>
     );
-}
+};
 export default Header;

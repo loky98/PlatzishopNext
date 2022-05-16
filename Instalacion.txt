@@ -6,3 +6,5 @@ intalacion de los recursos faltantes en el proyecto
 para intalar la configuracion de estilos
 - npm install axios
 para intalar las herramieta de consultas de la api
+
+'semi': ['error', 'always'],

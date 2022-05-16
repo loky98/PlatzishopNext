@@ -7,10 +7,10 @@ import styles from '@styles/MyOrder.module.scss';
 import algo from '@icons/flechita.svg'
 
 const MyOrder = () => {
-	const {state} = useContext(AppContext);
+	const { state } = useContext(AppContext);
 	const sumTotal = () => {
 		const reducer = (accumalator, currentValue) => accumalator + currentValue.price;
-		const sum = state.cart.reduce(reducer,0);
+		const sum = state.cart.reduce(reducer, 0);
 		return sum
 	}
 	return (
@@ -29,8 +29,10 @@ const MyOrder = () => {
 					</p>
 					<p>${sumTotal()} </p>
 				</div>
-				<Link className="primary-button" href="/Checkout">
-					Checkout
+				<Link href="/Checkout">
+					<button className="primary-button" >
+						Checkout
+					</button>
 				</Link>
 			</div>
 		</aside>

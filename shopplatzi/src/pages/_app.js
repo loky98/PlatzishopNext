@@ -1,16 +1,16 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 import Header from '@components/Header';
-import AppContext from '@context/AppContext'
-import useInicialState from '@hooks/useInicialState'
+import AppContext from '@context/AppContext';
+import useInicialState from '@hooks/useInicialState';
 
 function MyApp({ Component, pageProps }) {
   const initialState = useInicialState();
-  return(
+  return (
     <AppContext.Provider value={initialState}>
-    <Header />
+      <Header />
       <Component {...pageProps} />
     </AppContext.Provider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
